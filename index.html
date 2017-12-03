@@ -1,0 +1,74 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="pomodoro.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="pomodoro.js"></script>
+
+</head>
+<body>
+
+<header>
+  <h1>Pomodoro Clock</h1>
+</header>
+<!-- Session and Break settings. -->
+<article>
+ <div class="row">
+  <div class="col-sm-4"></div>
+ 
+  <div id="count" class="col-sm-4">
+    <div class="session">
+      <p>Session</p>
+      <p id="ssnTime" class="time">25</p>
+      <button id="btnSsnLeft" class=" btn btn-left" onClick ="setTimes(value, id)">&#9664;</button>
+      <button id="btnSsnRight" class=" btn btn-right" onClick="setTimes(value, id)">&#9654;</button>
+    </div>  
+    
+    <div class="session">
+      <p>Break</p>
+      <p id="brkTime" class="time">8<p>
+      <button id="btnBrkLeft" class=" btn btn-left" onClick ="setTimes(value, id)">&#9664;</button>
+      <button id="btnBrkRight" class=" btn btn-right" onClick="setTimes(value, id)">&#9654;</button>
+    </div> 
+  </div>  <!--column-->
+  
+  <div class="col-sm-4"></div>
+ </div><!-- row -->
+</article>
+
+<!-- Countdown Clock, minutes label, and progress bar-->
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <div id="countdown">0</div>
+    <div id="minutes">Session Minutes</div>
+    <div id="progress">
+      <div class="progress">
+        <div id="bar" class="progress-bar" style="width:0%"></div>
+      </div>
+     
+      <button id="start" class="go" onClick="Go()">go</button> 
+      <button class="go" onClick="Stop()">stop</button>
+      <button class="go" onClick="Reset()">reset</button>
+    </div>
+  </div> <!-- column -->
+  
+  <div class="col-sm-4"></div>
+</div> <!-- row -->
+     
+<footer class="footer">copyright &#169; 2017 Tessa Murphy<br/>
+Created for the freeCodeCamp Front-end Development project: <a href="https://freecodecamp.com/challenges/zipline-build-a-pomodoro-clock" target="_blank">Build a Pomodoro Clock</a></footer>
+
+</body>
+</html>
